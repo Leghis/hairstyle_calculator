@@ -1,144 +1,175 @@
-# Calculateur de Prix de Coiffure 💇‍♀️
+# Hairstyle Price Calculator 💇‍♀️
 
-Une application React moderne et interactive pour calculer les prix des services de coiffure, spécialement conçue pour le marché d'Ottawa.
+A modern and interactive React application for calculating hairstyling service prices, specially designed for the Ottawa market.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![Licence](https://img.shields.io/badge/license-MIT-green.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## 📋 Description
 
-Cette application web permet aux coiffeurs et aux clients de calculer rapidement et précisément le coût total des services de coiffure, en prenant en compte différents facteurs tels que le type de coiffure, la durée, les déplacements et les services additionnels.
+This web application allows hairstylists and clients to quickly and accurately calculate the total cost of hairstyling services, taking into account various factors such as hairstyle type, duration, travel distance, and additional services.
 
-## ✨ Fonctionnalités
+## ✨ Features
 
-- 🎯 Calcul précis des prix basé sur le temps et le type de service
-- 💰 Tarification dynamique avec fourchettes de prix min/max
-- 🚗 Calcul automatique des frais de déplacement
-- ➕ Services additionnels optionnels
-- 💵 Calcul automatique des taxes (TVH Ontario)
-- 🎨 Interface utilisateur moderne et responsive
-- ✨ Animations fluides et retours visuels
+- 🎯 Precise price calculation based on time and service type
+- 💰 Dynamic pricing with min/max price ranges
+- 🚗 Automatic travel fee calculation
+- ➕ Optional additional services
+- 💵 Automatic tax calculation (Ontario HST)
+- 🎨 Modern and responsive user interface
+- ✨ Smooth animations and visual feedback
 
-## 🛠️ Technologies Utilisées
+## 🛠️ Technologies Used
 
 - React.js
 - Tailwind CSS
-- Framer Motion (pour les animations)
-- Lucide React (pour les icônes)
-- Intl.NumberFormat (pour le formatage des devises)
+- Framer Motion (for animations)
+- Lucide React (for icons)
+- Intl.NumberFormat (for currency formatting)
 
 ## 📥 Installation
 
-1. Clonez le dépôt :
+1. Clone the repository:
 ```bash
-git clone https://github.com/votre-username/calculateur-prix-coiffure.git
+git clone https://github.com/your-username/hairstyle-price-calculator.git
 ```
 
-2. Installez les dépendances :
+2. Install dependencies:
 ```bash
-cd calculateur-prix-coiffure
+cd hairstyle-price-calculator
 npm install
 ```
 
-3. Installez les dépendances spécifiques :
+3. Install specific dependencies:
 ```bash
 npm install framer-motion lucide-react
 ```
 
-## 🚀 Démarrage
+## 🚀 Getting Started
 
-Pour lancer l'application en mode développement :
+To run the application in development mode:
 
 ```bash
 npm start
 ```
 
-L'application sera accessible à l'adresse [http://localhost:3000](http://localhost:3000)
+The application will be available at [http://localhost:3000](http://localhost:3000)
 
-## 📊 Structure des Données
+## 📊 Data Structure
 
-### Services de Coiffure
-L'application utilise un objet `servicesData` qui contient :
-- Liste des types de coiffures avec fourchettes de prix
-- Services additionnels
-- Frais de déplacement
-- Taux de TVH
+### Hairstyling Services
+The application uses a `servicesData` object that contains:
+- List of hairstyle types with price ranges
+- Additional services
+- Travel fees
+- HST rate
 
-### Exemple de Configuration
+### Configuration Example
 ```javascript
 const servicesData = {
   hairstyles: [
     {
       type: "boxBraids",
-      name: "Tresses (Box braids)",
+      name: "Box Braids",
       priceRange: [80, 120],
       timeRange: [5, 7],
       hourlyRate: 17.14
     },
-    // ... autres styles
+    // ... other styles
   ],
   additionalServices: [
-    { type: "deepConditioning", name: "Soin profond", price: 20 },
-    // ... autres services
+    { type: "deepConditioning", name: "Deep Conditioning", price: 20 },
+    // ... other services
   ]
 };
 ```
 
-## 🔧 Personnalisation
+## 🔧 Customization
 
-### Modifier les Services
-Pour ajouter ou modifier des services, éditez le fichier contenant `servicesData` :
+### Modifying Services
+To add or modify services, edit the file containing `servicesData`:
 
-1. Pour ajouter un nouveau type de coiffure :
+1. To add a new hairstyle type:
 ```javascript
 {
   type: "newStyle",
-  name: "Nouveau Style",
+  name: "New Style",
   priceRange: [min, max],
   timeRange: [minHours, maxHours],
   hourlyRate: rate
 }
 ```
 
-2. Pour ajouter un service additionnel :
+2. To add an additional service:
 ```javascript
 {
   type: "newService",
-  name: "Nouveau Service",
+  name: "New Service",
   price: amount
 }
 ```
 
-### Modification des Tarifs
-- `travelFeeBase` : Frais de déplacement de base
-- `travelFeePerKm` : Frais par kilomètre supplémentaire
-- `taxRate` : Taux de TVH
+### Rate Modifications
+- `travelFeeBase`: Base travel fee
+- `travelFeePerKm`: Fee per additional kilometer
+- `taxRate`: HST rate
 
-## 📱 Compatibilité
+## 📱 Compatibility
 
 - ✅ Desktop (Chrome, Firefox, Safari, Edge)
-- ✅ Tablettes
+- ✅ Tablets
 - ✅ Mobile
 - ✅ PWA ready
 
-## 🤝 Contribution
+## 🤝 Contributing
 
-Les contributions sont les bienvenues ! Pour contribuer :
+Contributions are welcome! To contribute:
 
-1. Forkez le projet
-2. Créez votre branche (`git checkout -b feature/AmazingFeature`)
-3. Committez vos changements (`git commit -m 'Add AmazingFeature'`)
-4. Pushez vers la branche (`git push origin feature/AmazingFeature`)
-5. Ouvrez une Pull Request
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📄 Licence
+## 📄 License
 
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## 👥 Contact
 
-Pour toute question ou suggestion, n'hésitez pas à ouvrir une issue ou à nous contacter directement.
+For any questions or suggestions, feel free to open an issue or contact us directly.
+
+## 🔑 Key Features Explained
+
+### Price Calculation
+- Base price calculated using hourly rate and duration
+- Price adjustments within specified ranges
+- Travel fee calculation based on distance
+- Additional services costs
+- HST calculation
+
+### User Interface
+- Intuitive form-based interface
+- Real-time price updates
+- Responsive design for all devices
+- Animated transitions and feedback
+- Clear price breakdown
+
+### Data Validation
+- Input validation for all fields
+- Time range restrictions per hairstyle
+- Distance validation for travel fees
+- Required field checking
+
+## 📈 Future Improvements
+
+- User accounts for stylists
+- Appointment scheduling
+- Payment integration
+- Multi-language support
+- Service history tracking
+- Export price quotes to PDF
 
 ---
 
-Développé avec ❤️ pour la communauté des coiffeurs d'Ottawa
+Developed with ❤️ for the Ottawa hairstyling community
