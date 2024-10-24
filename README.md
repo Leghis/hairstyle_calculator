@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+# Calculateur de Prix de Coiffure 💇‍♀️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Une application React moderne et interactive pour calculer les prix des services de coiffure, spécialement conçue pour le marché d'Ottawa.
 
-## Available Scripts
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Licence](https://img.shields.io/badge/license-MIT-green.svg)
 
-In the project directory, you can run:
+## 📋 Description
 
-### `npm start`
+Cette application web permet aux coiffeurs et aux clients de calculer rapidement et précisément le coût total des services de coiffure, en prenant en compte différents facteurs tels que le type de coiffure, la durée, les déplacements et les services additionnels.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Fonctionnalités
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🎯 Calcul précis des prix basé sur le temps et le type de service
+- 💰 Tarification dynamique avec fourchettes de prix min/max
+- 🚗 Calcul automatique des frais de déplacement
+- ➕ Services additionnels optionnels
+- 💵 Calcul automatique des taxes (TVH Ontario)
+- 🎨 Interface utilisateur moderne et responsive
+- ✨ Animations fluides et retours visuels
 
-### `npm test`
+## 🛠️ Technologies Utilisées
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js
+- Tailwind CSS
+- Framer Motion (pour les animations)
+- Lucide React (pour les icônes)
+- Intl.NumberFormat (pour le formatage des devises)
 
-### `npm run build`
+## 📥 Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clonez le dépôt :
+```bash
+git clone https://github.com/votre-username/calculateur-prix-coiffure.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Installez les dépendances :
+```bash
+cd calculateur-prix-coiffure
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Installez les dépendances spécifiques :
+```bash
+npm install framer-motion lucide-react
+```
 
-### `npm run eject`
+## 🚀 Démarrage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Pour lancer l'application en mode développement :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+L'application sera accessible à l'adresse [http://localhost:3000](http://localhost:3000)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📊 Structure des Données
 
-## Learn More
+### Services de Coiffure
+L'application utilise un objet `servicesData` qui contient :
+- Liste des types de coiffures avec fourchettes de prix
+- Services additionnels
+- Frais de déplacement
+- Taux de TVH
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Exemple de Configuration
+```javascript
+const servicesData = {
+  hairstyles: [
+    {
+      type: "boxBraids",
+      name: "Tresses (Box braids)",
+      priceRange: [80, 120],
+      timeRange: [5, 7],
+      hourlyRate: 17.14
+    },
+    // ... autres styles
+  ],
+  additionalServices: [
+    { type: "deepConditioning", name: "Soin profond", price: 20 },
+    // ... autres services
+  ]
+};
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔧 Personnalisation
 
-### Code Splitting
+### Modifier les Services
+Pour ajouter ou modifier des services, éditez le fichier contenant `servicesData` :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Pour ajouter un nouveau type de coiffure :
+```javascript
+{
+  type: "newStyle",
+  name: "Nouveau Style",
+  priceRange: [min, max],
+  timeRange: [minHours, maxHours],
+  hourlyRate: rate
+}
+```
 
-### Analyzing the Bundle Size
+2. Pour ajouter un service additionnel :
+```javascript
+{
+  type: "newService",
+  name: "Nouveau Service",
+  price: amount
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Modification des Tarifs
+- `travelFeeBase` : Frais de déplacement de base
+- `travelFeePerKm` : Frais par kilomètre supplémentaire
+- `taxRate` : Taux de TVH
 
-### Making a Progressive Web App
+## 📱 Compatibilité
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- ✅ Desktop (Chrome, Firefox, Safari, Edge)
+- ✅ Tablettes
+- ✅ Mobile
+- ✅ PWA ready
 
-### Advanced Configuration
+## 🤝 Contribution
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Les contributions sont les bienvenues ! Pour contribuer :
 
-### Deployment
+1. Forkez le projet
+2. Créez votre branche (`git checkout -b feature/AmazingFeature`)
+3. Committez vos changements (`git commit -m 'Add AmazingFeature'`)
+4. Pushez vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📄 Licence
 
-### `npm run build` fails to minify
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 👥 Contact
+
+Pour toute question ou suggestion, n'hésitez pas à ouvrir une issue ou à nous contacter directement.
+
+---
+
+Développé avec ❤️ pour la communauté des coiffeurs d'Ottawa
