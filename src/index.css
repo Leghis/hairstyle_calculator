@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root {
+    --tooltip-top: 0px;
+    --tooltip-left: 0px;
+}
