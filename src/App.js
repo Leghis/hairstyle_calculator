@@ -159,10 +159,10 @@ const servicesData = {
         {
             type: "childrensBraids",
             name: "Coiffure pour enfants",
-            priceRange: [40, 80],
+            priceRange: [35, 70],
             baseTime: 2,
             timeRange: [1, 3],
-            baseHourlyRate: 30.00,
+            baseHourlyRate: 23.00,
             complexity: 0.6,
             recommendedFactors: {
                 length: ["court", "moyen"],
@@ -194,7 +194,7 @@ const servicesData = {
             type: "stichsBraid",
             name: "stichs Braid",
             priceRange: [75, 120],
-            baseTime: 4.5,
+            baseTime: 2.5,
             timeRange: [4, 8],
             baseHourlyRate: 16.67,
             complexity: 0.7,
