@@ -29,10 +29,10 @@ const experienceLevels = {
 
 const hairFactors = {
     length: {
-        court: {label: "Court", timeImpact: -1, description: "Au-dessus des épaules"},
-        moyen: {label: "Moyen", timeImpact: 0, description: "Aux épaules"},
-        long: {label: "Long", timeImpact: 1, description: "Sous les épaules"},
-        tresLong: {label: "Très long", timeImpact: 2, description: "Bas du dos"}
+        court: {label: "Court", timeImpact: 2, description: "Au-dessus des épaules"},
+        moyen: {label: "Moyen", timeImpact: 1, description: "Aux épaules"},
+        long: {label: "Long", timeImpact: 0, description: "Sous les épaules"},
+        tresLong: {label: "Très long", timeImpact: -1, description: "Bas du dos"}
     },
     thickness: {
         fin: {label: "Fin", timeImpact: -0.5, description: "Cheveux légers et fins"},
@@ -189,6 +189,23 @@ const servicesData = {
             },
             description: "Installation ou entretien de dreadlocks",
             tips: "Le temps varie selon qu'il s'agit d'une installation ou d'un entretien"
+        },
+        {
+            type: "stichsBraid",
+            name: "stichs Braid",
+            priceRange: [75, 120],
+            baseTime: 4.5,
+            timeRange: [4, 8],
+            baseHourlyRate: 16.67,
+            complexity: 0.7,
+            recommendedFactors: {
+                length: ["moyen", "long", "tresLong"],
+                thickness: ["moyen", "epais"],
+                braidSize: ["fine", "moyenne"],
+                density: ["normale", "serree"]
+            },
+            description: "natte colle",
+            tips: "Le temps varie selon le nombre de tresse et de la grosseur"
         }
     ],
 
